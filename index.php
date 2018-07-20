@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <style>
 body{
 	font-family:Calibri;
@@ -15,8 +16,8 @@ body{
 }
 
 .content{
-	width:70%;
-	margin-left:15%;
+	width:80%;
+	margin-left:10%;
 }
 
 .header{
@@ -38,6 +39,15 @@ body{
 	height:30vh;
 	background-color:black;
 }
+
+.up-button{
+	position:fixed;
+	width:50px;
+	height:50px;
+	bottom:50px;
+	right:50px;
+	background-color:purple;
+}
 </style>
 </head>
 <body>
@@ -52,6 +62,14 @@ body{
 			<div class="footer">
 			</div>
 		</div>
+		<div class="up-button">
+			<a href="#" onclick="scrollup();return false;">Up</a>
+		</div>
 	</div>
 </body>
+<script>
+function scrollup(){
+	$("html, body").animate({ scrollTop: 0 }, "slow");
+}
+</script>
 </html>
